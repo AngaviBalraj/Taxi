@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.reference.ReferenceBrowse"
+        focusComponent="referencesTable"
+        lookupComponent="referencesTable"
+        messagesPack="com.company.taximgmt.gui.reference">
+    <dsContext>
+        <collectionDatasource id="referencesDs"
+                              class="com.company.taximgmt.entity.Reference"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Reference e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="referencesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="referencesTable"
+                datasource="referencesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="referencesTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="kilometer"/>
+                <column id="price"/>
+                <column id="car_name"/>
+                <column id="car_tax"/>
+                <column id="driver_tips"/>
+                <column id="peak_hours_price"/>
+                <column id="waiting_charges"/>
+            </columns>
+            <rows datasource="referencesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="referencesTable.create"/>
+                <button id="editBtn"
+                        action="referencesTable.edit"/>
+                <button id="removeBtn"
+                        action="referencesTable.remove"/>
+                <button id="excelBtn"
+                        action="referencesTable.excel"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

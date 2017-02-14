@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.employee_details.Employee_detailsBrowse"
+        focusComponent="employee_detailsesTable"
+        lookupComponent="employee_detailsesTable"
+        messagesPack="com.company.taximgmt.gui.employee_details">
+    <dsContext>
+        <collectionDatasource id="employee_detailsesDs"
+                              class="com.company.taximgmt.entity.Employee_details"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Employee_details e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="employee_detailsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="employee_detailsesTable"
+                datasource="employee_detailsesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="employee_detailsesTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="refresh"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="emp_id"/>
+                <column id="emp_name"/>
+                <column id="phone_number"/>
+                <column id="address"/>
+                <column id="work_type"/>
+            </columns>
+            <rows datasource="employee_detailsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="employee_detailsesTable.create"/>
+                <button id="editBtn"
+                        action="employee_detailsesTable.edit"/>
+                <button id="removeBtn"
+                        action="employee_detailsesTable.remove"/>
+                <button id="refreshBtn"
+                        action="employee_detailsesTable.refresh"/>
+                <button id="excelBtn"
+                        action="employee_detailsesTable.excel"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

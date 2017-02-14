@@ -1,0 +1,71 @@
+package com.company.taximgmt.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import com.haulmont.cuba.core.entity.StandardEntity;
+
+@Table(name = "TAXIMGMT_CUSTOMER_DETAILS")
+@Entity(name = "taximgmt$Customer_details")
+public class Customer_details extends StandardEntity {
+    private static final long serialVersionUID = -3035507574693889130L;
+
+    @Column(name = "CUSTOMER_ID", nullable = false, unique = true)
+    protected String customer_id;
+
+    @Column(name = "CUSTOMER_NAME", nullable = false)
+    protected String customer_name;
+
+    @Column(name = "EMAIL_ID", nullable = false)
+    protected String email_id;
+
+    @Column(name = "ADDRESS", nullable = false)
+    protected String address;
+
+    @Column(name = "ALTERNATE_PHONE_NUMBER", nullable = false)
+    protected String alternate_phone_number;
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+    public void setAlternate_phone_number(String alternate_phone_number) {
+        this.alternate_phone_number = alternate_phone_number;
+    }
+
+
+    public void setCustomer_id(String customer_id) {
+        this.customer_id = customer_id;
+    }
+
+    public String getCustomer_id() {
+        return customer_id;
+    }
+
+    public void setCustomer_name(String customer_name) {
+        this.customer_name = customer_name;
+    }
+
+    public String getCustomer_name() {
+        return customer_name;
+    }
+
+    public void setEmail_id(String email_id) {
+        this.email_id = email_id;
+    }
+
+    public String getEmail_id() {
+        return email_id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getAlternate_phone_number() {
+        return alternate_phone_number;
+    }
+
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="taximgmt$Car_details.browse"
+            template="com/company/taximgmt/gui/car_details/car_details-browse.xml"/>
+    <screen id="taximgmt$Car_details.edit"
+            template="com/company/taximgmt/gui/car_details/car_details-edit.xml"/>
+    <screen id="taximgmt$Employee_details.browse"
+            template="com/company/taximgmt/gui/employee_details/employee_details-browse.xml"/>
+    <screen id="taximgmt$Employee_details.edit"
+            template="com/company/taximgmt/gui/employee_details/employee_details-edit.xml"/>
+    <screen id="taximgmt$Emp_car_details.browse"
+            template="com/company/taximgmt/gui/emp_car_details/emp_car_details-browse.xml"/>
+    <screen id="taximgmt$Emp_car_details.edit"
+            template="com/company/taximgmt/gui/emp_car_details/emp_car_details-edit.xml"/>
+    <screen id="taximgmt$Customer_details.browse"
+            template="com/company/taximgmt/gui/customer_details/customer_details-browse.xml"/>
+    <screen id="taximgmt$Reference.browse"
+            template="com/company/taximgmt/gui/reference/reference-browse.xml"/>
+    <screen id="taximgmt$Reference.edit"
+            template="com/company/taximgmt/gui/reference/reference-edit.xml"/>
+</screen-config>

@@ -1,0 +1,13 @@
+alter table TAXIMGMT_BOOKING__DETAILS add column CUSTOMER_ID varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column BOOKING_DATE varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column DESTINATION varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column KILOMETER varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column SOURCE_TIME time default current_time not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column DESTINATION_TIME time default current_time not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column AMOUNT varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column CARD varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS add column BANK_NAME varchar(255) default '' not null ;
+alter table TAXIMGMT_BOOKING__DETAILS drop column DATE_ cascade ;
+alter table TAXIMGMT_BOOKING__DETAILS drop column TIME_ cascade ;
+alter table TAXIMGMT_BOOKING__DETAILS drop column DESTINAION cascade ;
+alter table TAXIMGMT_BOOKING__DETAILS drop column PHONE_NUM cascade ;

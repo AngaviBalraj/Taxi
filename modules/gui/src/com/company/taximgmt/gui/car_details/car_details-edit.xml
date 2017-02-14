@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.taximgmt.gui.car_details.Car_detailsEdit"
+        datasource="car_detailsDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.taximgmt.gui.car_details">
+    <dsContext>
+        <datasource id="car_detailsDs"
+                    class="com.company.taximgmt.entity.Car_details"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="car_detailsDs">
+            <column width="250px">
+                <field id="car_name"/>
+                <field id="car_number"/>
+                <field id="seats"/>
+                <field id="service_date"/>
+                <field id="description"/>
+                <field id="amount"/>
+                <field id="fuel"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

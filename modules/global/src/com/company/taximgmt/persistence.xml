@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="taximgmt"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>com.company.taximgmt.entity.Car_details</class>
+        <class>com.company.taximgmt.entity.Emp_car_details</class>
+        <class>com.company.taximgmt.entity.Employee_details</class>
+        <class>com.company.taximgmt.entity.Customer_details</class>
+        <class>com.company.taximgmt.entity.Reference</class>
+    </persistence-unit>
+</persistence>

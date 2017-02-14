@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.car_details.Car_detailsBrowse"
+        focusComponent="car_detailsesTable"
+        lookupComponent="car_detailsesTable"
+        messagesPack="com.company.taximgmt.gui.car_details">
+    <dsContext>
+        <collectionDatasource id="car_detailsesDs"
+                              class="com.company.taximgmt.entity.Car_details"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Car_details e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="car_detailsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="car_detailsesTable"
+                datasource="car_detailsesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="car_detailsesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="car_name"/>
+                <column id="car_number"/>
+                <column id="seats"/>
+                <column id="service_date"/>
+                <column id="description"/>
+                <column id="amount"/>
+                <column id="fuel"/>
+            </columns>
+            <rows datasource="car_detailsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="car_detailsesTable.create"/>
+                <button id="editBtn"
+                        action="car_detailsesTable.edit"/>
+                <button id="removeBtn"
+                        action="car_detailsesTable.remove"/>
+                <button id="excelBtn"
+                        action="car_detailsesTable.excel"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
