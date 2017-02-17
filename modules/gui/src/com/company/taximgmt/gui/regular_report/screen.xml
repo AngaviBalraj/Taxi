@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.taximgmt.gui.regular_report.Screen"
+        messagesPack="com/company/taximgmt/gui/regular_report">
+    <screen id="settings"
+            template="/com/haulmont/cuba/web/app/ui/core/settings/settings-window.xml">
+        <param name="changeThemeEnabled"
+               value="false"/>
+    </screen>
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <htmlBox id="htmlBox"
+                 margin="true"
+                 responsive="true">
+            <frame id="frame"
+                   align="TOP_RIGHT"
+                   height="100px"
+                   screen="settings"
+                   src="file:///C|/Users/AngaviBalraj/Desktop/jr/Capture.PNG"/>
+        </htmlBox>
+        <embedded/>
+    </layout>
+</window>

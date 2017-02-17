@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="Admin"
+    <menu id="Member_details"
           icon="icons/category.png"
           insertBefore="administration"
           stylename="Data">
-        <item id="taximgmt$Car_details.browse"/>
         <item id="taximgmt$Customer_details.browse"/>
-        <item id="taximgmt$Reference.browse"/>
+        <menu id="Employee_details">
+            <item id="taximgmt$Driver_details.browse"/>
+            <item id="taximgmt$Employee_details.browse"/>
+        </menu>
+        <item id="taximgmt$Regular_report.browse"/>
     </menu>
-    <menu id="driver_details"
+    <menu id="Reference"
           insertBefore="administration">
-        <item id="taximgmt$Emp_car_details.browse"/>
-        <item id="taximgmt$Employee_details.browse"/>
+        <item id="taximgmt$Car_details.browse"/>
+        <item id="taximgmt$Booking_details.browse"/>
+        <item id="taximgmt$Reference.browse"/>
+        <item id="taximgmt$Accounts.browse"/>
+        <item id="taximgmt$Booking.browse"/>
+        <item id="taximgmt$Regular_report.browse"/>
+        <item id="taximgmt$Dashboard.browse"/>
     </menu>
 </menu-config>

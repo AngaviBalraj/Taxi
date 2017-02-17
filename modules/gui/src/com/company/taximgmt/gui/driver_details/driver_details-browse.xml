@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.driver_details.Driver_detailsBrowse"
+        focusComponent="driver_detailsesTable"
+        lookupComponent="driver_detailsesTable"
+        messagesPack="com.company.taximgmt.gui.driver_details">
+    <dsContext>
+        <collectionDatasource id="driver_detailsesDs"
+                              class="com.company.taximgmt.entity.Driver_details"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Driver_details e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="driver_detailsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="driver_detailsesTable"
+                datasource="driver_detailsesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="driver_detailsesTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="driver_id"/>
+                <column id="driver_name"/>
+                <column id="phone_number"/>
+                <column id="licence_number"/>
+                <column id="car_number"/>
+                <column id="date"/>
+                <column id="start_time"/>
+                <column id="end_time"/>
+            </columns>
+            <rows datasource="driver_detailsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="driver_detailsesTable.create"/>
+                <button id="editBtn"
+                        action="driver_detailsesTable.edit"/>
+                <button id="removeBtn"
+                        action="driver_detailsesTable.remove"/>
+                <button id="excelBtn"
+                        action="driver_detailsesTable.excel"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

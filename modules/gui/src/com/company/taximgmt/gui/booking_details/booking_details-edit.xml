@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.taximgmt.gui.booking_details.Booking_detailsEdit"
+        datasource="booking_detailsDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.taximgmt.gui.booking_details">
+    <dsContext>
+        <datasource id="booking_detailsDs"
+                    class="com.company.taximgmt.entity.Booking_details"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="scrollBox"
+            spacing="true">
+        <scrollBox id="scrollBox"
+                   spacing="true">
+            <fieldGroup id="fieldGroup"
+                        datasource="booking_detailsDs">
+                <column width="250px">
+                    <field id="customer_id"/>
+                    <field id="customer_name"/>
+                    <field id="phone_number"/>
+                    <field id="date"/>
+                    <field id="source"/>
+                    <field id="source_time"/>
+                    <field id="destination"/>
+                    <field id="destination_time"/>
+                    <field id="card"/>
+                    <field id="bank_name"/>
+                    <field id="amount"/>
+                </column>
+            </fieldGroup>
+        </scrollBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

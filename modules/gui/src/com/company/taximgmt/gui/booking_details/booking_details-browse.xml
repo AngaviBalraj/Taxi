@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.booking_details.Booking_detailsBrowse"
+        focusComponent="booking_detailsesTable"
+        lookupComponent="booking_detailsesTable"
+        messagesPack="com.company.taximgmt.gui.booking_details">
+    <dsContext>
+        <collectionDatasource id="booking_detailsesDs"
+                              class="com.company.taximgmt.entity.Booking_details"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Booking_details e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="booking_detailsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="booking_detailsesTable"
+                datasource="booking_detailsesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="booking_detailsesTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+            </actions>
+            <columns>
+                <column id="customer_id"/>
+                <column id="customer_name"/>
+                <column id="phone_number"/>
+                <column id="date"/>
+                <column id="source"/>
+                <column id="source_time"/>
+                <column id="destination"/>
+                <column id="destination_time"/>
+                <column id="card"/>
+                <column id="bank_name"/>
+                <column id="amount"/>
+            </columns>
+            <rows datasource="booking_detailsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="booking_detailsesTable.create"/>
+                <button id="editBtn"
+                        action="booking_detailsesTable.edit"/>
+                <button id="removeBtn"
+                        action="booking_detailsesTable.remove"/>
+                <button id="excelBtn"
+                        action="booking_detailsesTable.excel"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

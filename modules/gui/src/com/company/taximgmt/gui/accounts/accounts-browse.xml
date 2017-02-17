@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.accounts.AccountsBrowse"
+        focusComponent="accountsesTable"
+        lookupComponent="accountsesTable"
+        messagesPack="com.company.taximgmt.gui.accounts">
+    <dsContext>
+        <collectionDatasource id="accountsesDs"
+                              class="com.company.taximgmt.entity.Accounts"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Accounts e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="accountsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="accountsesTable"
+                datasource="accountsesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="accountsesTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+                <action id="refresh"/>
+            </actions>
+            <columns>
+                <column id="employee_id"/>
+                <column id="car_number"/>
+                <column id="customer_id"/>
+                <column id="date"/>
+                <column id="daily_wages"/>
+                <column id="customized_date"/>
+                <column id="total_amount"/>
+            </columns>
+            <rows datasource="accountsesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="accountsesTable.create"/>
+                <button id="editBtn"
+                        action="accountsesTable.edit"/>
+                <button id="removeBtn"
+                        action="accountsesTable.remove"/>
+                <button id="excelBtn"
+                        action="accountsesTable.excel"/>
+                <button id="refreshBtn"
+                        action="accountsesTable.refresh"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

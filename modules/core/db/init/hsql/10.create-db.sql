@@ -38,29 +38,6 @@ create table TAXIMGMT_EMPLOYEE_DETAILS (
     primary key (ID)
 )^-- end TAXIMGMT_EMPLOYEE_DETAILS
 
--- begin TAXIMGMT_EMP_CAR_DETAILS
-create table TAXIMGMT_EMP_CAR_DETAILS (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    EMP_ID varchar(255) not null,
-    EMP_CAR_NO varchar(255) not null,
-    DATE_ date not null,
-    SOURCE varchar(255) not null,
-    SOURCE_TIME time not null,
-    DESTINATION varchar(255) not null,
-    DES_TIME time not null,
-    RATING integer not null,
-    --
-    primary key (ID)
-)^
--- end TAXIMGMT_EMP_CAR_DETAILS
 -- begin TAXIMGMT_CAR_DETAILS
 create table TAXIMGMT_CAR_DETAILS (
     ID varchar(36) not null,
@@ -106,3 +83,119 @@ create table TAXIMGMT_REFERENCE (
     primary key (ID)
 )^
 -- end TAXIMGMT_REFERENCE
+-- begin TAXIMGMT_DRIVER_DETAILS
+create table TAXIMGMT_DRIVER_DETAILS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    DRIVER_ID varchar(255) not null,
+    DRIVER_NAME varchar(255) not null,
+    PHONE_NUMBER varchar(255) not null,
+    LICENCE_NUMBER varchar(255) not null,
+    CAR_NUMBER varchar(255) not null,
+    DATE_ date not null,
+    START_TIME time not null,
+    END_TIME time not null,
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_DRIVER_DETAILS
+-- begin TAXIMGMT_BOOKING_DETAILS
+create table TAXIMGMT_BOOKING_DETAILS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    CUSTOMER_ID varchar(255) not null,
+    CUSTOMER_NAME varchar(255) not null,
+    PHONE_NUMBER varchar(255) not null,
+    DATE_ date not null,
+    SOURCE varchar(255) not null,
+    SOURCE_TIME time not null,
+    DESTINATION varchar(255) not null,
+    DESTINATION_TIME varchar(255) not null,
+    CARD varchar(255) not null,
+    BANK_NAME varchar(255),
+    AMOUNT varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_BOOKING_DETAILS
+-- begin TAXIMGMT_ACCOUNTS
+create table TAXIMGMT_ACCOUNTS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    EMPLOYEE_ID varchar(255) not null,
+    CAR_NUMBER varchar(255) not null,
+    CUSTOMER_ID varchar(255) not null,
+    DATE_ date not null,
+    DAILY_WAGES varchar(255) not null,
+    CUSTOMIZED_DATE varchar(255) not null,
+    TOTAL_AMOUNT varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_ACCOUNTS
+-- begin TAXIMGMT_REGULAR_REPORT
+create table TAXIMGMT_REGULAR_REPORT (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_REGULAR_REPORT
+-- begin TAXIMGMT_BOOKING
+create table TAXIMGMT_BOOKING (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    DATE_ date not null,
+    NO_OF_BOOKINGS varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_BOOKING
+-- begin TAXIMGMT_DASHBOARD
+create table TAXIMGMT_DASHBOARD (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_DASHBOARD

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.dashboard.DashboardBrowse"
+        lookupComponent="dashboardsTable"
+        messagesPack="com.company.taximgmt.gui.dashboard">
+    <dsContext>
+        <collectionDatasource id="dashboardsDs"
+                              class="com.company.taximgmt.entity.Dashboard"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Dashboard e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <frame screen="loginWindow"
+               src="file:///C|/Users/AngaviBalraj/Desktop/jr/Capture.PNG"/>
+    </layout>
+</window>
