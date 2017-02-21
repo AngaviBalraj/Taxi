@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.3.5'
+    ext.cubaVersion = '6.3.6'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -29,6 +29,7 @@ def webModule = project(':app-web')
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
 apply(plugin: 'eclipse')
 apply(plugin: 'java')
+apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
 cuba {
@@ -48,6 +49,7 @@ configure([globalModule, coreModule, guiModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
 apply(plugin: 'eclipse')
+apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
     dependencies {
@@ -72,7 +74,8 @@ configure(globalModule) {
 configure(webThemesModule) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'cuba')
+    apply(plugin: 'idea')
+apply(plugin: 'cuba')
 
     appModuleType = 'web-themes'
 
