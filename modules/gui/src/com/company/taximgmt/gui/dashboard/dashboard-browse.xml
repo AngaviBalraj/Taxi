@@ -2,7 +2,6 @@
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
         class="com.company.taximgmt.gui.dashboard.DashboardBrowse"
-        lookupComponent="dashboardsTable"
         messagesPack="com.company.taximgmt.gui.dashboard">
     <dsContext>
         <collectionDatasource id="dashboardsDs"
@@ -16,7 +15,6 @@
     <dialogMode height="600"
                 width="800"/>
     <layout spacing="true">
-        <frame screen="loginWindow"
-               src="file:///C|/Users/AngaviBalraj/Desktop/jr/Capture.PNG"/>
+        <frame screen="editWindowActions"/>
     </layout>
 </window>

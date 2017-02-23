@@ -3,8 +3,4 @@
     <include file="com/company/taximgmt/screens.xml"/>
     <screen id="taximgmt$Booking.browse"
             template="com/company/taximgmt/web/booking/booking-browse.xml"/>
-    <screen id="taximgmt$Regular_report.edit"
-            template="com/company/taximgmt/web/regular_report/regular_report-edit.xml"/>
-    <screen id="taximgmt$Regular_report.browse"
-            template="com/company/taximgmt/web/regular_report/regular_report-browse.xml"/>
 </screen-config>

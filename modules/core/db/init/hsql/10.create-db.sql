@@ -154,20 +154,7 @@ create table TAXIMGMT_ACCOUNTS (
     primary key (ID)
 )^
 -- end TAXIMGMT_ACCOUNTS
--- begin TAXIMGMT_REGULAR_REPORT
-create table TAXIMGMT_REGULAR_REPORT (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    primary key (ID)
-)^
--- end TAXIMGMT_REGULAR_REPORT
+
 -- begin TAXIMGMT_BOOKING
 create table TAXIMGMT_BOOKING (
     ID varchar(36) not null,

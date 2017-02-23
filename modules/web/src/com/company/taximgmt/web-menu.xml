@@ -9,7 +9,6 @@
             <item id="taximgmt$Driver_details.browse"/>
             <item id="taximgmt$Employee_details.browse"/>
         </menu>
-        <item id="taximgmt$Regular_report.browse"/>
     </menu>
     <menu id="Reference"
           insertBefore="administration">
@@ -18,7 +17,6 @@
         <item id="taximgmt$Reference.browse"/>
         <item id="taximgmt$Accounts.browse"/>
         <item id="taximgmt$Booking.browse"/>
-        <item id="taximgmt$Regular_report.browse"/>
         <item id="taximgmt$Dashboard.browse"/>
     </menu>
 </menu-config>

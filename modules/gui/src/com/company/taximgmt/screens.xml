@@ -26,8 +26,6 @@
             template="com/company/taximgmt/gui/accounts/accounts-browse.xml"/>
     <screen id="taximgmt$Accounts.edit"
             template="com/company/taximgmt/gui/accounts/accounts-edit.xml"/>
-    <screen id="taximgmt$Regular_report.browse"
-            template="com/company/taximgmt/gui/regular_report/regular_report-browse.xml"/>
     <screen id="screen"
             agent="DESKTOP"
             template="com/company/taximgmt/gui/regular_report/screen.xml"/>
@@ -35,4 +33,6 @@
             template="com/company/taximgmt/gui/dashboard/dashboard-browse.xml"/>
     <screen id="taximgmt$Dashboard.edit"
             template="com/company/taximgmt/gui/dashboard/dashboard-edit.xml"/>
+    <screen id="screen_1"
+            template="com/company/taximgmt/gui/screens/screen_1.xml"/>
 </screen-config>

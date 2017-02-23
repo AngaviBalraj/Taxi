@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" path="/taximgmt-web-toolkit" kind="src"/>
 	<classpathentry exported="true" path="/taximgmt-web-themes" kind="src"/>
 	<classpathentry exported="true" path="/taximgmt-web" kind="src"/>
 	<classpathentry exported="true" path="/taximgmt-gui" kind="src"/>
