@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.taximgmt.web.mainwindow.ExtAppMainWindow"
+        extends="/com/haulmont/cuba/web/app/mainwindow/mainwindow.xml"
+        messagesPack="com.company.taximgmt.web.mainwindow"
+        xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
+    <layout>
+        <split id="foldersSplit">
+            <main:workArea id="workArea">
+                <main:initialLayout>
+                    <cssLayout stylename="doc">
+                        <chart
+                               stylename="panal"
+                               width="50px"/>
+                    </cssLayout>
+                </main:initialLayout>
+            </main:workArea>
+        </split>
+    </layout>
+    <cssLayout/>
+</window>

@@ -43,11 +43,7 @@
                   name="app-web"/>
         <artifact configuration="themes"
                   name="app-web-themes"/>
-        <artifact classifier="web"
-                  configuration="webcontent"
-                  ext="zip"
-                  name="app-web-toolkit"
-                  skipIfExists="web-toolkit"/>
+        
         <property name="cuba.springContextConfig"
                   value="+com/company/taximgmt/web-spring.xml"/>
         <property name="cuba.dispatcherSpringContextConfig"
