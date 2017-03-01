@@ -41,9 +41,9 @@
                   configuration="webcontent"
                   ext="zip"
                   name="app-web"/>
+       
         <artifact configuration="themes"
                   name="app-web-themes"/>
-        
         <property name="cuba.springContextConfig"
                   value="+com/company/taximgmt/web-spring.xml"/>
         <property name="cuba.dispatcherSpringContextConfig"
@@ -59,11 +59,11 @@
         <property name="cuba.web.widgetSet"
                   value="com.company.taximgmt.web.toolkit.ui.AppWidgetSet"/>
     </module>
-    <module name="web-themes">
-        <artifact name="app-web-themes"/>
-    </module>
     <module dependsOn="web"
             name="web-toolkit">
         <artifact name="app-web-toolkit"/>
+    </module>
+    <module name="web-themes">
+        <artifact name="app-web-themes"/>
     </module>
 </app-component>

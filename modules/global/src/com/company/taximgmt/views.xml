@@ -3,4 +3,7 @@
     <view class="com.company.taximgmt.entity.Car_details"
           extends="_minimal"
           name="cars-view"/>
+    <view class="com.company.taximgmt.entity.Booking_details"
+          extends="_local"
+          name="booking_details-view"/>
 </views>

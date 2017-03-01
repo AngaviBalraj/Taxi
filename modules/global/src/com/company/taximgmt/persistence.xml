@@ -11,6 +11,5 @@
         <class>com.company.taximgmt.entity.Booking_details</class>
         <class>com.company.taximgmt.entity.Accounts</class>
         <class>com.company.taximgmt.entity.Booking</class>
-        <class>com.company.taximgmt.entity.Dashboard</class>
     </persistence-unit>
 </persistence>

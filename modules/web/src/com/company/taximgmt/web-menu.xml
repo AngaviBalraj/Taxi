@@ -16,7 +16,5 @@
         <item id="taximgmt$Booking_details.browse"/>
         <item id="taximgmt$Reference.browse"/>
         <item id="taximgmt$Accounts.browse"/>
-        <item id="taximgmt$Booking.browse"/>
-        <item id="taximgmt$Dashboard.browse"/>
     </menu>
 </menu-config>

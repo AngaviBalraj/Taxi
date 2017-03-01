@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.3.6'
+    ext.cubaVersion = '6.3.5'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -28,11 +28,9 @@ def webToolkitModule = project(':app-web-toolkit')
 def webThemesModule= project(':app-web-themes')
 
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
-
-
-apply(plugin: 'idea')
 apply(plugin: 'java')
 apply(plugin: 'eclipse')
+apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
 cuba {
@@ -51,9 +49,9 @@ def hsql = 'org.hsqldb:hsqldb:2.2.9'
 configure([globalModule, coreModule, guiModule, webModule, webToolkitModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
     apply(plugin: 'eclipse')
-    apply(plugin: 'cuba')
+    apply(plugin: 'idea')
+apply(plugin: 'cuba')
 
     dependencies {
         testCompile('junit:junit:4.12')
@@ -244,7 +242,8 @@ configure(webToolkitModule) {
 configure(webThemesModule) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'cuba')
+    apply(plugin: 'idea')
+apply(plugin: 'cuba')
 
     appModuleType = 'web-themes'
 

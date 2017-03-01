@@ -172,17 +172,3 @@ create table TAXIMGMT_BOOKING (
     primary key (ID)
 )^
 -- end TAXIMGMT_BOOKING
--- begin TAXIMGMT_DASHBOARD
-create table TAXIMGMT_DASHBOARD (
-    ID varchar(36) not null,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    primary key (ID)
-)^
--- end TAXIMGMT_DASHBOARD

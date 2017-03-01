@@ -29,10 +29,6 @@
     <screen id="screen"
             agent="DESKTOP"
             template="com/company/taximgmt/gui/regular_report/screen.xml"/>
-    <screen id="taximgmt$Dashboard.browse"
-            template="com/company/taximgmt/gui/dashboard/dashboard-browse.xml"/>
-    <screen id="taximgmt$Dashboard.edit"
-            template="com/company/taximgmt/gui/dashboard/dashboard-edit.xml"/>
     <screen id="screen_1"
             template="com/company/taximgmt/gui/screens/screen_1.xml"/>
 </screen-config>

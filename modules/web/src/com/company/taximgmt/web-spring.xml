@@ -10,8 +10,6 @@
                   ref="cuba_clusterInvocationSupport"/>
         <property name="remoteServices">
             <map>
-                <entry key="taximgmt_NewService"
-                       value="com.company.taximgmt.service.NewService"/>
             </map>
         </property>
     </bean>
