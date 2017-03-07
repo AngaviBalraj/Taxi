@@ -36,8 +36,9 @@ public class Booking_details extends StandardEntity {
     @Column(name = "DESTINATION", nullable = false)
     protected String destination;
 
+    @Temporal(TemporalType.TIME)
     @Column(name = "DESTINATION_TIME", nullable = false)
-    protected String destination_time;
+    protected Date destination_time;
 
     @Column(name = "CARD", nullable = false)
     protected String card;
@@ -47,6 +48,15 @@ public class Booking_details extends StandardEntity {
 
     @Column(name = "AMOUNT", nullable = false)
     protected String amount;
+
+    public Date getDestination_time() {
+        return destination_time;
+    }
+
+    public void setDestination_time(Date destination_time) {
+        this.destination_time = destination_time;
+    }
+
 
     public void setCustomer_id(String customer_id) {
         this.customer_id = customer_id;
@@ -102,14 +112,6 @@ public class Booking_details extends StandardEntity {
 
     public String getDestination() {
         return destination;
-    }
-
-    public void setDestination_time(String destination_time) {
-        this.destination_time = destination_time;
-    }
-
-    public String getDestination_time() {
-        return destination_time;
     }
 
     public void setCard(String card) {

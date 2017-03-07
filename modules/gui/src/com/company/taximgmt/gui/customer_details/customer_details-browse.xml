@@ -60,7 +60,8 @@
                         <column id="customer_name"/>
                         <column id="email_id"/>
                         <column id="address"/>
-                        <column id="alternate_phone_number"/>
+                        <column id="phonenumber"/>
+                        <column id="alternate_ph_number"/>
                     </columns>
                     <rows datasource="customer_detailsesDs"/>
                     <rowsCount/>
@@ -92,7 +93,8 @@
                             <field id="customer_name"/>
                             <field id="email_id"/>
                             <field id="address"/>
-                            <field id="alternate_phone_number"/>
+                            <field id="phonenumber"/>
+                            <field id="alternate_ph_number"/>
                         </column>
                     </fieldGroup>
                 </vbox>

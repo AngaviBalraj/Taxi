@@ -15,6 +15,7 @@ import javax.inject.Named;
 import java.util.Collections;
 import java.util.Map;
 import java.util.UUID;
+
 public class Customer_detailsBrowse extends AbstractLookup {
 
     /**
@@ -66,7 +67,7 @@ public class Customer_detailsBrowse extends AbstractLookup {
      */
     @Named("customer_detailsesTable.remove")
     private RemoveAction customer_detailsesTableRemove;
-    
+   
     @Inject
     private DataSupplier dataSupplier;
 
@@ -124,6 +125,8 @@ public class Customer_detailsBrowse extends AbstractLookup {
         
         disableEditControls();
     }
+
+
 
     /**
      * Method that is invoked by clicking Save button after editing an existing or creating a new record

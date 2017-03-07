@@ -40,6 +40,21 @@ public class Car_details extends StandardEntity {
     @Column(name = "FUEL", nullable = false)
     protected String fuel;
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
+    }
+
+
     public void setService_date(Date service_date) {
         this.service_date = service_date;
     }

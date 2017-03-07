@@ -7,9 +7,9 @@
         <class>com.company.taximgmt.entity.Employee_details</class>
         <class>com.company.taximgmt.entity.Customer_details</class>
         <class>com.company.taximgmt.entity.Reference</class>
-        <class>com.company.taximgmt.entity.Driver_details</class>
         <class>com.company.taximgmt.entity.Booking_details</class>
         <class>com.company.taximgmt.entity.Accounts</class>
         <class>com.company.taximgmt.entity.Booking</class>
+        <class>com.company.taximgmt.entity.Driver_details</class>
     </persistence-unit>
 </persistence>

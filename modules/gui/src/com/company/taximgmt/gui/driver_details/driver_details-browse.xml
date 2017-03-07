@@ -6,6 +6,9 @@
         lookupComponent="driver_detailsesTable"
         messagesPack="com.company.taximgmt.gui.driver_details">
     <dsContext>
+        <datasource id="driver_detailsDs"
+                    class="com.company.taximgmt.entity.Driver_details"
+                    view="_local"/>
         <collectionDatasource id="driver_detailsesDs"
                               class="com.company.taximgmt.entity.Driver_details"
                               view="_local">
@@ -14,47 +17,93 @@
             </query>
         </collectionDatasource>
     </dsContext>
+    <actions>
+        <action id="save"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="save"
+                shortcut="CTRL-ENTER"/>
+        <action id="cancel"
+                caption="mainMsg://actions.Cancel"
+                icon="icons/cancel.png"
+                invoke="cancel"/>
+    </actions>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="driver_detailsesTable"
-            spacing="true">
-        <filter id="filter"
-                applyTo="driver_detailsesTable"
-                datasource="driver_detailsesDs">
-            <properties include=".*"/>
-        </filter>
-        <table id="driver_detailsesTable"
-               multiselect="true"
+    <layout>
+        <split id="split"
+               height="100%"
+               orientation="horizontal"
+               reversePosition="true"
                width="100%">
-            <actions>
-                <action id="create"/>
-                <action id="edit"/>
-                <action id="remove"/>
-                <action id="excel"/>
-            </actions>
-            <columns>
-                <column id="driver_id"/>
-                <column id="driver_name"/>
-                <column id="phone_number"/>
-                <column id="licence_number"/>
-                <column id="car_number"/>
-                <column id="date"/>
-                <column id="start_time"/>
-                <column id="end_time"/>
-            </columns>
-            <rows datasource="driver_detailsesDs"/>
-            <rowsCount/>
-            <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
-                <button id="createBtn"
-                        action="driver_detailsesTable.create"/>
-                <button id="editBtn"
-                        action="driver_detailsesTable.edit"/>
-                <button id="removeBtn"
-                        action="driver_detailsesTable.remove"/>
-                <button id="excelBtn"
-                        action="driver_detailsesTable.excel"/>
-            </buttonsPanel>
-        </table>
+            <vbox id="lookupBox"
+                  expand="driver_detailsesTable"
+                  height="100%"
+                  margin="false,true,false,false"
+                  spacing="true">
+                <filter id="filter"
+                        applyTo="driver_detailsesTable"
+                        datasource="driver_detailsesDs">
+                    <properties include=".*"/>
+                </filter>
+                <table id="driver_detailsesTable"
+                       width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                        <action id="excel"/>
+                    </actions>
+                    <columns>
+                        <column id="emp_id"/>
+                        <column id="driver_name"/>
+                        <column id="phone_number"/>
+                        <column id="car_number"/>
+                        <column id="licence_number"/>
+                        <column id="join_date"/>
+                    </columns>
+                    <rows datasource="driver_detailsesDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true">
+                        <button id="createBtn"
+                                action="driver_detailsesTable.create"/>
+                        <button id="editBtn"
+                                action="driver_detailsesTable.edit"/>
+                        <button id="removeBtn"
+                                action="driver_detailsesTable.remove"/>
+                        <button id="excelBtn"
+                                action="driver_detailsesTable.excel"/>
+                    </buttonsPanel>
+                </table>
+            </vbox>
+            <vbox id="editBox"
+                  expand="fieldGroupBox"
+                  height="100%"
+                  margin="false,false,false,true"
+                  spacing="true">
+                <vbox id="fieldGroupBox">
+                    <fieldGroup id="fieldGroup"
+                                datasource="driver_detailsDs">
+                        <column width="250px">
+                            <field id="emp_id"/>
+                            <field id="driver_name"/>
+                            <field id="phone_number"/>
+                            <field id="car_number"/>
+                            <field id="licence_number"/>
+                            <field id="join_date"/>
+                        </column>
+                    </fieldGroup>
+                </vbox>
+                <hbox id="actionsPane"
+                      spacing="true"
+                      visible="false">
+                    <button id="saveBtn"
+                            action="save"/>
+                    <button id="cancelBtn"
+                            action="cancel"/>
+                </hbox>
+            </vbox>
+        </split>
     </layout>
 </window>

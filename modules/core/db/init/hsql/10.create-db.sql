@@ -13,7 +13,8 @@ create table TAXIMGMT_CUSTOMER_DETAILS (
     CUSTOMER_NAME varchar(255) not null,
     EMAIL_ID varchar(255) not null,
     ADDRESS varchar(255) not null,
-    ALTERNATE_PHONE_NUMBER varchar(255) not null,
+    PHONENUMBER varchar(255) not null,
+    ALTERNATE_PH_NUMBER varchar(255) not null,
     --
     primary key (ID)
 )^-- end TAXIMGMT_CUSTOMER_DETAILS
@@ -94,14 +95,12 @@ create table TAXIMGMT_DRIVER_DETAILS (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    DRIVER_ID varchar(255) not null,
+    EMP_ID varchar(255) not null,
     DRIVER_NAME varchar(255) not null,
     PHONE_NUMBER varchar(255) not null,
-    LICENCE_NUMBER varchar(255) not null,
     CAR_NUMBER varchar(255) not null,
-    DATE_ date not null,
-    START_TIME time not null,
-    END_TIME time not null,
+    LICENCE_NUMBER varchar(255) not null,
+    JOIN_DATE timestamp not null,
     --
     primary key (ID)
 )^
@@ -124,7 +123,7 @@ create table TAXIMGMT_BOOKING_DETAILS (
     SOURCE varchar(255) not null,
     SOURCE_TIME time not null,
     DESTINATION varchar(255) not null,
-    DESTINATION_TIME varchar(255) not null,
+    DESTINATION_TIME time not null,
     CARD varchar(255) not null,
     BANK_NAME varchar(255),
     AMOUNT varchar(255) not null,

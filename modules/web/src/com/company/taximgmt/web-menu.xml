@@ -6,8 +6,8 @@
           stylename="Data">
         <item id="taximgmt$Customer_details.browse"/>
         <menu id="Employee_details">
-            <item id="taximgmt$Driver_details.browse"/>
             <item id="taximgmt$Employee_details.browse"/>
+            <item id="taximgmt$Driver_details.browse"/>
         </menu>
     </menu>
     <menu id="Reference"

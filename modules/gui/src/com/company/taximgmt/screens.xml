@@ -14,10 +14,6 @@
             template="com/company/taximgmt/gui/reference/reference-browse.xml"/>
     <screen id="taximgmt$Reference.edit"
             template="com/company/taximgmt/gui/reference/reference-edit.xml"/>
-    <screen id="taximgmt$Driver_details.edit"
-            template="com/company/taximgmt/gui/driver_details/driver_details-edit.xml"/>
-    <screen id="taximgmt$Driver_details.browse"
-            template="com/company/taximgmt/gui/driver_details/driver_details-browse.xml"/>
     <screen id="taximgmt$Booking_details.edit"
             template="com/company/taximgmt/gui/booking_details/booking_details-edit.xml"/>
     <screen id="taximgmt$Booking_details.browse"
@@ -31,4 +27,6 @@
             template="com/company/taximgmt/gui/regular_report/screen.xml"/>
     <screen id="screen_1"
             template="com/company/taximgmt/gui/screens/screen_1.xml"/>
+    <screen id="taximgmt$Driver_details.browse"
+            template="com/company/taximgmt/gui/driver_details/driver_details-browse.xml"/>
 </screen-config>

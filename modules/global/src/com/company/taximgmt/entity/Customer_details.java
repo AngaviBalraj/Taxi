@@ -22,17 +22,34 @@ public class Customer_details extends StandardEntity {
     @Column(name = "ADDRESS", nullable = false)
     protected String address;
 
-    @Column(name = "ALTERNATE_PHONE_NUMBER", nullable = false)
-    protected String alternate_phone_number;
+    @Column(name = "PHONENUMBER", nullable = false)
+    protected String phonenumber;
+
+    @Column(name = "ALTERNATE_PH_NUMBER", nullable = false)
+    protected String alternate_ph_number;
+
+    public void setAlternate_ph_number(String alternate_ph_number) {
+        this.alternate_ph_number = alternate_ph_number;
+    }
+
+    public String getAlternate_ph_number() {
+        return alternate_ph_number;
+    }
+
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
 
     public void setAddress(String address) {
         this.address = address;
     }
 
-
-    public void setAlternate_phone_number(String alternate_phone_number) {
-        this.alternate_phone_number = alternate_phone_number;
-    }
 
 
     public void setCustomer_id(String customer_id) {
@@ -61,10 +78,6 @@ public class Customer_details extends StandardEntity {
 
     public String getAddress() {
         return address;
-    }
-
-    public String getAlternate_phone_number() {
-        return alternate_phone_number;
     }
 
 
