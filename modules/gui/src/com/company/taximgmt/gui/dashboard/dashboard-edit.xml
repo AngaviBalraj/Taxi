@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editCaption"
-        class="com.company.taximgmt.web.dashboard.DashboardEdit"
+        class="com.company.taximgmt.gui.dashboard.DashboardEdit"
         datasource="dashboardDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.taximgmt.web.dashboard">
+        messagesPack="com.company.taximgmt.gui.dashboard">
     <dsContext>
         <datasource id="dashboardDs"
                     class="com.company.taximgmt.entity.Dashboard"

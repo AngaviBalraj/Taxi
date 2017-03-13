@@ -3,8 +3,4 @@
     <include file="com/company/taximgmt/screens.xml"/>
     <screen id="screen_1"
             template="com/company/taximgmt/web/screens/screen_1.xml"/>
-    <screen id="taximgmt$Dashboard.browse"
-            template="com/company/taximgmt/web/dashboard/dashboard-browse.xml"/>
-    <screen id="taximgmt$Dashboard.edit"
-            template="com/company/taximgmt/web/dashboard/dashboard-edit.xml"/>
 </screen-config>
