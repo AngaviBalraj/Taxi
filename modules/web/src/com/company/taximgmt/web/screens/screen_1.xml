@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.taximgmt.web.screens.Screen1"
+        messagesPack="com.company.taximgmt.web.screens">
+    <dsContext>
+        <datasource id="customer_detailsDs"
+                    class="com.company.taximgmt.entity.Customer_details"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <frame src="F:\taxi_management_cuba\modules\web\src\com\company\taximgmt\web\CAPTURE.png"/>
+    </layout>
+</window>

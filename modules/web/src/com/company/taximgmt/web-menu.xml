@@ -9,6 +9,7 @@
             <item id="taximgmt$Employee_details.browse"/>
             <item id="taximgmt$Driver_details.browse"/>
         </menu>
+        <item id="taximgmt$Dashboard.browse"/>
     </menu>
     <menu id="Reference"
           insertBefore="administration">

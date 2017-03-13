@@ -1,4 +1,4 @@
-package com.company.taximgmt.gui.screens;
+package com.company.taximgmt.web.screens;
 
 import com.haulmont.cuba.gui.components.AbstractWindow;
 

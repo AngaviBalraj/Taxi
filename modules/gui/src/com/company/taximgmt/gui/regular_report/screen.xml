@@ -18,8 +18,9 @@
                    align="TOP_RIGHT"
                    height="100px"
                    screen="settings"
-                   src="file:///C|/Users/AngaviBalraj/Desktop/jr/Capture.PNG"/>
+                   src="F:\taxi_management_cuba\modules\web\src\com\company\taximgmt\web\CAPTURE.png"/>
         </htmlBox>
-        <embedded/>
+        <embedded height="123px"
+                  width="237px"/>
     </layout>
 </window>

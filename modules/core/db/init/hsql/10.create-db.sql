@@ -154,8 +154,8 @@ create table TAXIMGMT_ACCOUNTS (
 )^
 -- end TAXIMGMT_ACCOUNTS
 
--- begin TAXIMGMT_BOOKING
-create table TAXIMGMT_BOOKING (
+-- begin TAXIMGMT_DASHBOARD
+create table TAXIMGMT_DASHBOARD (
     ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -165,9 +165,6 @@ create table TAXIMGMT_BOOKING (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    DATE_ date not null,
-    NO_OF_BOOKINGS varchar(255) not null,
-    --
     primary key (ID)
 )^
--- end TAXIMGMT_BOOKING
+-- end TAXIMGMT_DASHBOARD

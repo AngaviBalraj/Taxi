@@ -28,8 +28,6 @@ def webToolkitModule = project(':app-web-toolkit')
 def webThemesModule= project(':app-web-themes')
 
 def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
-apply(plugin: 'java')
-apply(plugin: 'eclipse')
 apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
@@ -49,7 +47,6 @@ def hsql = 'org.hsqldb:hsqldb:2.2.9'
 configure([globalModule, coreModule, guiModule, webModule, webToolkitModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'eclipse')
     apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
