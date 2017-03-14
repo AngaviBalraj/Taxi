@@ -15,6 +15,11 @@
     <dialogMode height="600"
                 width="800"/>
     <layout>
+        <label id="label"
+               align="TOP_RIGHT"
+               htmlEnabled="true"
+               icon="image.png"
+               value="DASHBOARD"/>
         <hbox spacing="true">
             <groupBox id="groupBoxImage"
                       caption="Embedded image from FileStorage"
@@ -28,15 +33,7 @@
                       height="250px"
                       width="250px">
                 <embedded id="image"
-                          align="MIDDLE_CENTER"/>
-            </groupBox>
-            <groupBox id="groupbox_1"
-                      caption="Embedded image from FileStorage"
-                      height="250px"
-                      width="300px">
-                <embedded id="embedded_1"
-                          align="MIDDLE_CENTER"
-                          width="100%"/>
+                          align="BOTTOM_CENTER"/>
             </groupBox>
         </hbox>
     </layout>

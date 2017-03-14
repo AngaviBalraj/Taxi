@@ -22,14 +22,8 @@
             template="com/company/taximgmt/gui/accounts/accounts-browse.xml"/>
     <screen id="taximgmt$Accounts.edit"
             template="com/company/taximgmt/gui/accounts/accounts-edit.xml"/>
-    <screen id="screen"
-            agent="DESKTOP"
-            template="com/company/taximgmt/gui/regular_report/screen.xml"/>
     <screen id="taximgmt$Driver_details.browse"
             template="com/company/taximgmt/gui/driver_details/driver_details-browse.xml"/>
-    <screen id="screen_image"
-            agent="DESKTOP"
-            template="com/company/taximgmt/gui/regular_report/screen.xml"/>
     <screen id="taximgmt$Dashboard.browse"
             template="com/company/taximgmt/gui/dashboard/dashboard-browse.xml"/>
     <screen id="taximgmt$Dashboard.edit"

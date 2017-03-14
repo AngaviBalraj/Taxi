@@ -10,6 +10,8 @@ import com.haulmont.cuba.gui.AppConfig;
 import com.haulmont.cuba.gui.components.AbstractFrame;
 import com.haulmont.cuba.gui.components.Embedded;
 
+import com.haulmont.cuba.gui.components.Label;
+
 import javax.inject.Inject;
 import java.io.ByteArrayInputStream;
 import java.util.Date;
@@ -26,22 +28,39 @@ public class DashboardBrowse extends AbstractLookup {
     @Inject
     private Metadata metadata;
 
+    @Inject
+    private Label htmlLabel;
+
+   
     @Override
     public void init(Map<String, Object> params) {
         loadImageFromFileStorage();
+         htmlLabel.setValue(HTML);
 
         if (AppConfig.getClientType() == ClientType.WEB) {
             image.setSource("image.png");
+            
         }
     }
+
+    private static final String HTML = "\n" +
+            "<ul>" +
+            "  <li><b>DASHBOARD</b></li>" +
+           // "  <li>itemized lists</li>" +
+            //"  <li>etc.</li>" +
+            "</ul> " ;
+           // "are preserved.";
+
+
+    
 
     private void loadImageFromFileStorage() {
         // A file descriptor entity is usually stored in the database and referenced by an attribute of your data
         // model entity. Here we simply create it for the purpose of the example.
         FileDescriptor imageFile = metadata.create(FileDescriptor.class);
     
-        //imageFile.setId(UUID.fromString("61a6a1ee-f13a-f44f-0201-c2f9b3288305"));
-        imageFile.setName("logo.png");
+        imageFile.setId(UUID.fromString("61a6a1ee-f13a-f44f-0201-c2f9b3288305"));
+        imageFile.setName("F:\\taxi_management_cuba\\modules\\web\\themes\\halo\\image.png");
         imageFile.setCreateDate(new Date(1427857200503L));
         imageFile.setExtension("png");
         
@@ -57,7 +76,8 @@ public class DashboardBrowse extends AbstractLookup {
             imageFromFileStorage.setType(Embedded.Type.IMAGE);
           
         } else {
-            imageFromFileStorage.setVisible(true);
+            imageFromFileStorage.setVisible(false);
         }
     }
+   
 }
