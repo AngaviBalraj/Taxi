@@ -1,6 +1,5 @@
 package com.company.taximgmt.gui.dashboard;
 
-import com.haulmont.cuba.gui.components.AbstractWindow;
 import com.haulmont.cuba.core.app.FileStorageService;
 import com.haulmont.cuba.core.entity.FileDescriptor;
 import com.haulmont.cuba.core.global.ClientType;
@@ -16,8 +15,9 @@ import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
 
-public class DashboardBrowse extends AbstractWindow {
- @Inject
+public class ImageEmbeddedFrame extends AbstractFrame {
+
+    @Inject
     private Embedded imageFromFileStorage;
     @Inject
     private Embedded image;
@@ -25,7 +25,7 @@ public class DashboardBrowse extends AbstractWindow {
     private FileStorageService fileStorageService;
     @Inject
     private Metadata metadata;
-    public static final String IMAGE_PATH = "F:\\taxi_management_cuba\\modules\\gui\\src\\com\\company\\taximgmt\\gui\\dashboard\\image.jpg";
+    public static final String IMAGE_PATH = "F:\\taxi_management_cuba\\modules\\gui\\src\\com\\company\\taximgmt\\gui\\dashboard//image.png";
     public static final String IMAGE_NAME = "image.jpg";
     @Override
     public void init(Map<String, Object> params) {
