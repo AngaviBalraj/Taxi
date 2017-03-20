@@ -10,6 +10,6 @@
         <class>com.company.taximgmt.entity.Booking_details</class>
         <class>com.company.taximgmt.entity.Accounts</class>
         <class>com.company.taximgmt.entity.Driver_details</class>
-        <class>com.company.taximgmt.entity.Dashboard</class>
+        <class>com.company.taximgmt.entity.Test</class>
     </persistence-unit>
 </persistence>

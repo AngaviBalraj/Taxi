@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.company.taximgmt.web.mainwindow.ExtAppMainWindow"
+        extends="/com/haulmont/cuba/web/app/mainwindow/mainwindow.xml"
+        messagesPack="com.company.taximgmt.web.mainwindow"
+        xmlns:ext="http://schemas.haulmont.com/cuba/window-ext.xsd"
+        xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
+    <layout spacing="true">
+        <split id="foldersSplit">
+            <main:workArea id="workArea"
+                           height="455px">
+                <main:initialLayout>
+                    <htmlBox align="TOP_CENTER"
+                             template="sample"
+                             width="500px">
+                        <label id="logo"
+                               height="100px"
+                               htmlEnabled="true"
+                               stylename="logo"
+                               value="DASHBOARD"
+                               width="1077px"/>
+                    </htmlBox>
+                    <groupBox height="195px"
+                              orientation="horizontal"
+                              width="1055px">
+                        <label id="label_1"
+                               height="100%"
+                               htmlEnabled="true"
+                               icon="image.png"
+                               value="re2"
+                               width="122px"/>
+                        <label id="label"
+                               height="100%"
+                               htmlEnabled="true"
+                               icon="image.png"
+                               value="re1"
+                               width="211px"/>
+                    </groupBox>
+                    <groupBox height="85px"
+                              orientation="horizontal"
+                              width="1064px">
+                        <label id="label_2"
+                               height="144px"
+                               htmlEnabled="true"
+                               icon="map.png"
+                               value="re3"
+                               width="490px"/>
+                    </groupBox>
+                </main:initialLayout>
+            </main:workArea>
+        </split>
+    </layout>
+</window>

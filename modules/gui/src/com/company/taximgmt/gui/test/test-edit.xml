@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editCaption"
-        class="com.company.taximgmt.gui.dashboard.DashboardEdit"
-        datasource="dashboardDs"
+        class="com.company.taximgmt.gui.test.TestEdit"
+        datasource="testDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.taximgmt.gui.dashboard">
+        messagesPack="com.company.taximgmt.gui.test">
     <dsContext>
-        <datasource id="dashboardDs"
-                    class="com.company.taximgmt.entity.Dashboard"
+        <datasource id="testDs"
+                    class="com.company.taximgmt.entity.Test"
                     view="_local"/>
     </dsContext>
     <dialogMode height="600"
@@ -15,7 +15,7 @@
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="dashboardDs">
+                    datasource="testDs">
             <column width="250px">
             </column>
         </fieldGroup>

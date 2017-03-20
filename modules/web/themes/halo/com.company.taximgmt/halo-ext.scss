@@ -1,4 +1,14 @@
 /* Define your theme modifications inside next mixin */
-@mixin com_company_taximgmt-halo-ext {
 
+
+
+
+
+@mixin com_company_taximgmt-halo-ext {
+  @include halo;
+.logo {
+    font-size: 96px;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
 }

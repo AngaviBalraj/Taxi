@@ -44,6 +44,7 @@
                 <column id="card"/>
                 <column id="bank_name"/>
                 <column id="amount"/>
+                <column id="driver_id"/>
             </columns>
             <rows datasource="booking_detailsesDs"/>
             <rowsCount/>

@@ -30,6 +30,7 @@
                     <field id="card"/>
                     <field id="bank_name"/>
                     <field id="amount"/>
+                    <field id="driver_id"/>
                 </column>
             </fieldGroup>
         </scrollBox>

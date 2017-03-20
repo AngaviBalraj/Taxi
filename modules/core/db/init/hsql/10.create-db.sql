@@ -119,6 +119,7 @@ create table TAXIMGMT_BOOKING_DETAILS (
     CUSTOMER_ID varchar(255) not null,
     CUSTOMER_NAME varchar(255) not null,
     PHONE_NUMBER varchar(255) not null,
+    DRIVER_ID varchar(255) not null,
     DATE_ date not null,
     SOURCE varchar(255) not null,
     SOURCE_TIME time not null,
@@ -154,8 +155,8 @@ create table TAXIMGMT_ACCOUNTS (
 )^
 -- end TAXIMGMT_ACCOUNTS
 
--- begin TAXIMGMT_DASHBOARD
-create table TAXIMGMT_DASHBOARD (
+-- begin TAXIMGMT_TEST
+create table TAXIMGMT_TEST (
     ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -167,4 +168,4 @@ create table TAXIMGMT_DASHBOARD (
     --
     primary key (ID)
 )^
--- end TAXIMGMT_DASHBOARD
+-- end TAXIMGMT_TEST
