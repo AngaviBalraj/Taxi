@@ -9,43 +9,30 @@
         <split id="foldersSplit">
             <main:workArea id="workArea"
                            height="455px">
-                <main:initialLayout>
-                    <htmlBox align="TOP_CENTER"
-                             template="sample"
-                             width="500px">
-                        <label id="logo"
-                               height="100px"
-                               htmlEnabled="true"
-                               stylename="logo"
-                               value="DASHBOARD"
-                               width="1077px"/>
-                    </htmlBox>
-                    <groupBox height="195px"
-                              orientation="horizontal"
-                              width="1055px">
-                        <label id="label_1"
-                               height="100%"
-                               htmlEnabled="true"
-                               icon="image.png"
-                               value="re2"
-                               width="122px"/>
-                        <label id="label"
-                               height="100%"
-                               htmlEnabled="true"
-                               icon="image.png"
-                               value="re1"
-                               width="211px"/>
-                    </groupBox>
-                    <groupBox height="85px"
-                              orientation="horizontal"
-                              width="1064px">
-                        <label id="label_2"
-                               height="144px"
-                               htmlEnabled="true"
-                               icon="map.png"
-                               value="re3"
-                               width="490px"/>
-                    </groupBox>
+                <main:initialLayout enable="false"
+                                    margin="true,false,false,false"
+                                    spacing="false">
+                    <label id="label"
+                           height="100%"
+                           htmlEnabled="true"
+                           stylename="bold"
+                           value="DASHBOARD"/>
+                    <label align="TOP_RIGHT"
+                           height="100%"
+                           htmlEnabled="true"
+                           icon="image.png"/>
+                    <label id="label_1"
+                           align="TOP_RIGHT"
+                           htmlEnabled="true"
+                           icon="image.png"/>
+                    <label align="MIDDLE_CENTER"
+                           htmlEnabled="true"
+                           icon="map.png"/>
+                    <label align="TOP_RIGHT"
+                           htmlEnabled="true"
+                           icon="image.png"/>
+                    <label htmlEnabled="true"
+                           icon="image.png"/>
                 </main:initialLayout>
             </main:workArea>
         </split>
