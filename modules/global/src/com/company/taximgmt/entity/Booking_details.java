@@ -19,8 +19,8 @@ public class Booking_details extends StandardEntity {
     @Column(name = "CUSTOMER_NAME", nullable = false)
     protected String customer_name;
 
-    @Column(name = "DRIVER_ID", nullable = false)
-    protected String driver_id;
+    @Column(name = "EMP_ID", nullable = false)
+    protected String emp_id;
 
     @Column(name = "PHONE_NUMBER", nullable = false)
     protected String phone_number;
@@ -52,12 +52,13 @@ public class Booking_details extends StandardEntity {
     @Column(name = "AMOUNT", nullable = false)
     protected String amount;
 
-    public void setDriver_id(String driver_id) {
-        this.driver_id = driver_id;
+
+    public void setEmp_id(String emp_id) {
+        this.emp_id = emp_id;
     }
 
-    public String getDriver_id() {
-        return driver_id;
+    public String getEmp_id() {
+        return emp_id;
     }
 
 

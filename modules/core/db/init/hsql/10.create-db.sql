@@ -57,10 +57,10 @@ create table TAXIMGMT_CAR_DETAILS (
     DESCRIPTION varchar(255) not null,
     AMOUNT varchar(255) not null,
     FUEL varchar(255) not null,
+    ACTIVE boolean not null,
     --
     primary key (ID)
-)^
--- end TAXIMGMT_CAR_DETAILS
+)^-- end TAXIMGMT_CAR_DETAILS
 
 -- begin TAXIMGMT_REFERENCE
 create table TAXIMGMT_REFERENCE (
@@ -118,8 +118,8 @@ create table TAXIMGMT_BOOKING_DETAILS (
     --
     CUSTOMER_ID varchar(255) not null,
     CUSTOMER_NAME varchar(255) not null,
+    EMP_ID varchar(255) not null,
     PHONE_NUMBER varchar(255) not null,
-    DRIVER_ID varchar(255) not null,
     DATE_ date not null,
     SOURCE varchar(255) not null,
     SOURCE_TIME time not null,
@@ -145,18 +145,16 @@ create table TAXIMGMT_ACCOUNTS (
     --
     EMPLOYEE_ID varchar(255) not null,
     CAR_NUMBER varchar(255) not null,
-    CUSTOMER_ID varchar(255) not null,
     DATE_ date not null,
     DAILY_WAGES varchar(255) not null,
-    CUSTOMIZED_DATE varchar(255) not null,
-    TOTAL_AMOUNT varchar(255) not null,
+    MONTH_ varchar(255),
+    AMOUNT varchar(255),
     --
     primary key (ID)
 )^
 -- end TAXIMGMT_ACCOUNTS
-
--- begin TAXIMGMT_TEST
-create table TAXIMGMT_TEST (
+-- begin TAXIMGMT_CURRENT_STATUS
+create table TAXIMGMT_CURRENT_STATUS (
     ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -166,6 +164,39 @@ create table TAXIMGMT_TEST (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
+    CUSTOMER_ID varchar(255) not null,
+    DRIVER_ID varchar(255) not null,
+    CAR_NUMBER varchar(255) not null,
+    CAR_ASSIGNED boolean,
+    CAR_BOOKED boolean,
+    STARTED boolean,
+    RUNNING boolean,
+    --
     primary key (ID)
 )^
--- end TAXIMGMT_TEST
+-- end TAXIMGMT_CURRENT_STATUS
+-- begin TAXIMGMT_CLOSED_BOOKINGS
+create table TAXIMGMT_CLOSED_BOOKINGS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    CUSTOMER_ID varchar(255) not null,
+    EMPLOYEE_ID varchar(255) not null,
+    CAR_NUMBER varchar(255) not null,
+    SOURCE varchar(255) not null,
+    SOURCE_TIME timestamp not null,
+    DESTINATION varchar(255) not null,
+    DESTINATION_TIME timestamp not null,
+    BANK_DETAILS varchar(255),
+    CARD varchar(255),
+    AMOUNT varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end TAXIMGMT_CLOSED_BOOKINGS

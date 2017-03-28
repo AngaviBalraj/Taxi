@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.taximgmt.gui.current_status.Current_statusBrowse"
+        focusComponent="current_statusesTable"
+        lookupComponent="current_statusesTable"
+        messagesPack="com.company.taximgmt.gui.current_status">
+    <dsContext>
+        <collectionDatasource id="current_statusesDs"
+                              class="com.company.taximgmt.entity.Current_status"
+                              view="_local">
+            <query>
+                <![CDATA[select e from taximgmt$Current_status e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="current_statusesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="current_statusesTable"
+                datasource="current_statusesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="current_statusesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="customer_id"/>
+                <column id="driver_id"/>
+                <column id="car_number"/>
+                <column id="car_booked"/>
+                <column id="car_assigned"/>
+                <column id="started"/>
+                <column id="running"/>
+            </columns>
+            <rows datasource="current_statusesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="current_statusesTable.create"/>
+                <button id="editBtn"
+                        action="current_statusesTable.edit"/>
+                <button id="removeBtn"
+                        action="current_statusesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

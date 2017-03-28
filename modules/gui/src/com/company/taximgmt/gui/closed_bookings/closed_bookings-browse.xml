@@ -1,63 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="com.company.taximgmt.gui.booking_details.Booking_detailsBrowse"
-        focusComponent="booking_detailsesTable"
-        lookupComponent="booking_detailsesTable"
-        messagesPack="com.company.taximgmt.gui.booking_details">
+        class="com.company.taximgmt.gui.closed_bookings.Closed_bookingsBrowse"
+        focusComponent="closed_bookingsesTable"
+        lookupComponent="closed_bookingsesTable"
+        messagesPack="com.company.taximgmt.gui.closed_bookings">
     <dsContext>
-        <collectionDatasource id="booking_detailsesDs"
-                              class="com.company.taximgmt.entity.Booking_details"
+        <collectionDatasource id="closed_bookingsesDs"
+                              class="com.company.taximgmt.entity.Closed_bookings"
                               view="_local">
             <query>
-                <![CDATA[select e from taximgmt$Booking_details e]]>
+                <![CDATA[select e from taximgmt$Closed_bookings e]]>
             </query>
         </collectionDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="booking_detailsesTable"
+    <layout expand="closed_bookingsesTable"
             spacing="true">
         <filter id="filter"
-                applyTo="booking_detailsesTable"
-                datasource="booking_detailsesDs">
+                applyTo="closed_bookingsesTable"
+                datasource="closed_bookingsesDs">
             <properties include=".*"/>
         </filter>
-        <table id="booking_detailsesTable"
-               multiselect="true"
+        <table id="closed_bookingsesTable"
                width="100%">
             <actions>
                 <action id="create"/>
                 <action id="edit"/>
                 <action id="remove"/>
-                <action id="excel"/>
             </actions>
             <columns>
                 <column id="customer_id"/>
-                <column id="customer_name"/>
-                <column id="phone_number"/>
-                <column id="date"/>
+                <column id="employee_id"/>
+                <column id="car_number"/>
                 <column id="source"/>
                 <column id="source_time"/>
                 <column id="destination"/>
                 <column id="destination_time"/>
+                <column id="bank_details"/>
                 <column id="card"/>
-                <column id="bank_name"/>
                 <column id="amount"/>
-                <column id="emp_id"/>
             </columns>
-            <rows datasource="booking_detailsesDs"/>
+            <rows datasource="closed_bookingsesDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="booking_detailsesTable.create"/>
+                        action="closed_bookingsesTable.create"/>
                 <button id="editBtn"
-                        action="booking_detailsesTable.edit"/>
+                        action="closed_bookingsesTable.edit"/>
                 <button id="removeBtn"
-                        action="booking_detailsesTable.remove"/>
-                <button id="excelBtn"
-                        action="booking_detailsesTable.excel"/>
+                        action="closed_bookingsesTable.remove"/>
             </buttonsPanel>
         </table>
     </layout>

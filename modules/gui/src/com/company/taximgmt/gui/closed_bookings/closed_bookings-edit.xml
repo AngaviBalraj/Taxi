@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editCaption"
-        class="com.company.taximgmt.gui.accounts.AccountsEdit"
-        datasource="accountsDs"
+        class="com.company.taximgmt.gui.closed_bookings.Closed_bookingsEdit"
+        datasource="closed_bookingsDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.taximgmt.gui.accounts">
+        messagesPack="com.company.taximgmt.gui.closed_bookings">
     <dsContext>
-        <datasource id="accountsDs"
-                    class="com.company.taximgmt.entity.Accounts"
+        <datasource id="closed_bookingsDs"
+                    class="com.company.taximgmt.entity.Closed_bookings"
                     view="_local"/>
     </dsContext>
     <dialogMode height="600"
@@ -15,13 +15,17 @@
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="accountsDs">
+                    datasource="closed_bookingsDs">
             <column width="250px">
+                <field id="customer_id"/>
                 <field id="employee_id"/>
                 <field id="car_number"/>
-                <field id="date"/>
-                <field id="daily_wages"/>
-                <field id="month"/>
+                <field id="source"/>
+                <field id="source_time"/>
+                <field id="destination"/>
+                <field id="destination_time"/>
+                <field id="bank_details"/>
+                <field id="card"/>
                 <field id="amount"/>
             </column>
         </fieldGroup>

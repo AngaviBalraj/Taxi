@@ -36,11 +36,10 @@
             <columns>
                 <column id="employee_id"/>
                 <column id="car_number"/>
-                <column id="customer_id"/>
                 <column id="date"/>
                 <column id="daily_wages"/>
-                <column id="customized_date"/>
-                <column id="total_amount"/>
+                <column id="month"/>
+                <column id="amount"/>
             </columns>
             <rows datasource="accountsesDs"/>
             <rowsCount/>

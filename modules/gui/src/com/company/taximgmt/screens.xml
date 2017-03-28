@@ -24,8 +24,14 @@
             template="com/company/taximgmt/gui/accounts/accounts-edit.xml"/>
     <screen id="taximgmt$Driver_details.browse"
             template="com/company/taximgmt/gui/driver_details/driver_details-browse.xml"/>
-    <screen id="taximgmt$Test.edit"
-            template="com/company/taximgmt/gui/test/test-edit.xml"/>
-    <screen id="taximgmt$Test.browse"
-            template="com/company/taximgmt/gui/test/test-browse.xml"/>
+    <screen id="screen"
+            template="com/company/taximgmt/gui/screens/screen.xml"/>
+    <screen id="taximgmt$Closed_bookings.edit"
+            template="com/company/taximgmt/gui/closed_bookings/closed_bookings-edit.xml"/>
+    <screen id="taximgmt$Closed_bookings.browse"
+            template="com/company/taximgmt/gui/closed_bookings/closed_bookings-browse.xml"/>
+    <screen id="taximgmt$Current_status.edit"
+            template="com/company/taximgmt/gui/current_status/current_status-edit.xml"/>
+    <screen id="taximgmt$Current_status.browse"
+            template="com/company/taximgmt/gui/current_status/current_status-browse.xml"/>
 </screen-config>

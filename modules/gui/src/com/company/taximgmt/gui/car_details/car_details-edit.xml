@@ -24,6 +24,7 @@
                 <field id="description"/>
                 <field id="amount"/>
                 <field id="fuel"/>
+                <field id="active"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

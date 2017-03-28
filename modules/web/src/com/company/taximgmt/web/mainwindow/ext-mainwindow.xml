@@ -5,34 +5,32 @@
         messagesPack="com.company.taximgmt.web.mainwindow"
         xmlns:ext="http://schemas.haulmont.com/cuba/window-ext.xsd"
         xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
-    <layout spacing="true">
+    <layout>
+        <hbox id="titleBar">
+            <label align="MIDDLE_CENTER"
+                   ext:index="2"
+                   htmlEnabled="true"
+                   stylename="colored"
+                   value="DASHBOARD"/>
+            <main:userIndicator id="userIndicator"
+                                align="MIDDLE_RIGHT"/>
+        </hbox>
         <split id="foldersSplit">
-            <main:workArea id="workArea"
-                           height="455px">
-                <main:initialLayout enable="false"
-                                    margin="true,false,false,false"
-                                    spacing="false">
-                    <label id="label"
-                           height="100%"
-                           htmlEnabled="true"
-                           stylename="bold"
-                           value="DASHBOARD"/>
-                    <label align="TOP_RIGHT"
-                           height="100%"
-                           htmlEnabled="true"
-                           icon="image.png"/>
-                    <label id="label_1"
-                           align="TOP_RIGHT"
-                           htmlEnabled="true"
-                           icon="image.png"/>
-                    <label align="MIDDLE_CENTER"
-                           htmlEnabled="true"
-                           icon="map.png"/>
-                    <label align="TOP_RIGHT"
-                           htmlEnabled="true"
-                           icon="image.png"/>
-                    <label htmlEnabled="true"
-                           icon="image.png"/>
+            <main:workArea id="workArea">
+                <main:initialLayout>
+                    <hbox>
+                        <label htmlEnabled="true"
+                               icon="ss.png"/>
+                        <label htmlEnabled="true"
+                               icon="car.png"/>
+                        <label htmlEnabled="true"
+                               icon="rating.png"/>
+                    </hbox>
+                    <hbox>
+                        <label htmlEnabled="true"
+                               icon="map.png"
+                               value="msg://map"/>
+                    </hbox>
                 </main:initialLayout>
             </main:workArea>
         </split>

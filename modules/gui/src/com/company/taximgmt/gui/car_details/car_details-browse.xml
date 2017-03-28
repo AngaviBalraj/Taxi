@@ -39,6 +39,7 @@
                 <column id="description"/>
                 <column id="amount"/>
                 <column id="fuel"/>
+                <column id="active"/>
             </columns>
             <rows datasource="car_detailsesDs"/>
             <rowsCount/>

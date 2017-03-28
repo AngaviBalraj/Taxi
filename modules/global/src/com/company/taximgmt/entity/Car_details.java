@@ -40,6 +40,18 @@ public class Car_details extends StandardEntity {
     @Column(name = "FUEL", nullable = false)
     protected String fuel;
 
+    @Column(name = "ACTIVE", nullable = false)
+    protected Boolean active = false;
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+
     public void setDescription(String description) {
         this.description = description;
     }

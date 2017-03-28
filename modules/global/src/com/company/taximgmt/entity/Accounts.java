@@ -13,14 +13,11 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 public class Accounts extends StandardEntity {
     private static final long serialVersionUID = -4083457465554811731L;
 
-    @Column(name = "EMPLOYEE_ID", nullable = false, unique = true)
+    @Column(name = "EMPLOYEE_ID", nullable = false)
     protected String employee_id;
 
     @Column(name = "CAR_NUMBER", nullable = false, unique = true)
     protected String car_number;
-
-    @Column(name = "CUSTOMER_ID", nullable = false)
-    protected String customer_id;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "DATE_", nullable = false)
@@ -29,11 +26,28 @@ public class Accounts extends StandardEntity {
     @Column(name = "DAILY_WAGES", nullable = false)
     protected String daily_wages;
 
-    @Column(name = "CUSTOMIZED_DATE", nullable = false)
-    protected String customized_date;
+    @Column(name = "MONTH_")
+    protected String month;
 
-    @Column(name = "TOTAL_AMOUNT", nullable = false)
-    protected String total_amount;
+    @Column(name = "AMOUNT")
+    protected String amount;
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
 
     public void setEmployee_id(String employee_id) {
         this.employee_id = employee_id;
@@ -51,14 +65,6 @@ public class Accounts extends StandardEntity {
         return car_number;
     }
 
-    public void setCustomer_id(String customer_id) {
-        this.customer_id = customer_id;
-    }
-
-    public String getCustomer_id() {
-        return customer_id;
-    }
-
     public void setDate(Date date) {
         this.date = date;
     }
@@ -73,22 +79,6 @@ public class Accounts extends StandardEntity {
 
     public String getDaily_wages() {
         return daily_wages;
-    }
-
-    public void setCustomized_date(String customized_date) {
-        this.customized_date = customized_date;
-    }
-
-    public String getCustomized_date() {
-        return customized_date;
-    }
-
-    public void setTotal_amount(String total_amount) {
-        this.total_amount = total_amount;
-    }
-
-    public String getTotal_amount() {
-        return total_amount;
     }
 
 
