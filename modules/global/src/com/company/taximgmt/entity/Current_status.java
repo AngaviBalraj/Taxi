@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.security.entity.ConstraintCheckType;
 
 @Table(name = "TAXIMGMT_CURRENT_STATUS")
 @Entity(name = "taximgmt$Current_status")
@@ -19,17 +20,18 @@ public class Current_status extends StandardEntity {
     @Column(name = "CAR_NUMBER", nullable = false)
     protected String car_number;
 
-    @Column(name = "CAR_BOOKED")
-    protected Boolean car_booked;
+    @Column(name = "STATUS", nullable = false)
+    protected String status;
 
-    @Column(name = "CAR_ASSIGNED")
-    protected Boolean car_assigned;
+    public Status getStatus() {
+        return status == null ? null : Status.fromId(status);
+    }
 
-    @Column(name = "STARTED")
-    protected Boolean started;
+    public void setStatus(Status status) {
+        this.status = status == null ? null : status.getId();
+    }
 
-    @Column(name = "RUNNING")
-    protected Boolean running;
+
 
     public void setCustomer_id(String customer_id) {
         this.customer_id = customer_id;
@@ -53,38 +55,6 @@ public class Current_status extends StandardEntity {
 
     public String getCar_number() {
         return car_number;
-    }
-
-    public void setCar_booked(Boolean car_booked) {
-        this.car_booked = car_booked;
-    }
-
-    public Boolean getCar_booked() {
-        return car_booked;
-    }
-
-    public void setCar_assigned(Boolean car_assigned) {
-        this.car_assigned = car_assigned;
-    }
-
-    public Boolean getCar_assigned() {
-        return car_assigned;
-    }
-
-    public void setStarted(Boolean started) {
-        this.started = started;
-    }
-
-    public Boolean getStarted() {
-        return started;
-    }
-
-    public void setRunning(Boolean running) {
-        this.running = running;
-    }
-
-    public Boolean getRunning() {
-        return running;
     }
 
 

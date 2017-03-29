@@ -20,9 +20,15 @@
                 <field id="employee_id"/>
                 <field id="car_number"/>
                 <field id="date"/>
-                <field id="daily_wages"/>
+                <field id="daily_wages"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.accounts.AccountsEdit"/>
+                </field>
                 <field id="month"/>
-                <field id="amount"/>
+                <field id="amount"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.accounts.AccountsEdit"/>
+                </field>
             </column>
         </fieldGroup>
         <frame id="windowActions"

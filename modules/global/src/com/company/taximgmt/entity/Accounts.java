@@ -24,13 +24,31 @@ public class Accounts extends StandardEntity {
     protected Date date;
 
     @Column(name = "DAILY_WAGES", nullable = false)
-    protected String daily_wages;
+    protected Integer daily_wages;
 
     @Column(name = "MONTH_")
     protected String month;
 
-    @Column(name = "AMOUNT")
-    protected String amount;
+    @Column(name = "AMOUNT", nullable = false)
+    protected Integer amount;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+
+    public Integer getDaily_wages() {
+        return daily_wages;
+    }
+
+    public void setDaily_wages(Integer daily_wages) {
+        this.daily_wages = daily_wages;
+    }
+
 
     public void setMonth(String month) {
         this.month = month;
@@ -38,14 +56,6 @@ public class Accounts extends StandardEntity {
 
     public String getMonth() {
         return month;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public String getAmount() {
-        return amount;
     }
 
 
@@ -71,14 +81,6 @@ public class Accounts extends StandardEntity {
 
     public Date getDate() {
         return date;
-    }
-
-    public void setDaily_wages(String daily_wages) {
-        this.daily_wages = daily_wages;
-    }
-
-    public String getDaily_wages() {
-        return daily_wages;
     }
 
 

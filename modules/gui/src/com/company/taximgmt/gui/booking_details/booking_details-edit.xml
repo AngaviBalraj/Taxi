@@ -22,6 +22,7 @@
                     <field id="customer_id"/>
                     <field id="customer_name"/>
                     <field id="phone_number"/>
+                    <field id="emp_id"/>
                     <field id="date"/>
                     <field id="source"/>
                     <field id="source_time"/>
@@ -29,8 +30,10 @@
                     <field id="destination_time"/>
                     <field id="card"/>
                     <field id="bank_name"/>
-                    <field id="amount"/>
-                    <field id="emp_id"/>
+                    <field id="amount"
+                           datatype="int">
+                        <validator class="com.company.taximgmt.gui.booking_details.Booking_detailsEdit"/>
+                    </field>
                 </column>
             </fieldGroup>
         </scrollBox>

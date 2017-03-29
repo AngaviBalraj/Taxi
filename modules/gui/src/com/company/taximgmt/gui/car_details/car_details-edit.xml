@@ -19,15 +19,22 @@
             <column width="250px">
                 <field id="car_name"/>
                 <field id="car_number"/>
-                <field id="seats"/>
+                <field id="seats"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.car_details.Car_detailsEdit"/>
+                </field>
                 <field id="service_date"/>
                 <field id="description"/>
-                <field id="amount"/>
+                <field id="amount" datatype="int">
+                    <validator class="com.company.taximgmt.gui.car_details.Car_detailsEdit"/>
+</field>
                 <field id="fuel"/>
                 <field id="active"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
+               caption="Validate"
+               invoke="validate"
                screen="editWindowActions"/>
     </layout>
 </window>

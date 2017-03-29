@@ -20,10 +20,7 @@
                 <field id="customer_id"/>
                 <field id="driver_id"/>
                 <field id="car_number"/>
-                <field id="car_booked"/>
-                <field id="car_assigned"/>
-                <field id="started"/>
-                <field id="running"/>
+                <field id="status"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

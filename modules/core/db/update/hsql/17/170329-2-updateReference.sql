@@ -1,0 +1,12 @@
+alter table TAXIMGMT_REFERENCE drop column KILOMETER cascade ;
+alter table TAXIMGMT_REFERENCE add column KILOMETER integer default 0 not null ;
+alter table TAXIMGMT_REFERENCE drop column PRICE cascade ;
+alter table TAXIMGMT_REFERENCE add column PRICE integer default 0 not null ;
+alter table TAXIMGMT_REFERENCE drop column CAR_TAX cascade ;
+alter table TAXIMGMT_REFERENCE add column CAR_TAX integer default 0 not null ;
+alter table TAXIMGMT_REFERENCE drop column DRIVER_TIPS cascade ;
+alter table TAXIMGMT_REFERENCE add column DRIVER_TIPS integer default 0 not null ;
+alter table TAXIMGMT_REFERENCE drop column PEAK_HOURS_PRICE cascade ;
+alter table TAXIMGMT_REFERENCE add column PEAK_HOURS_PRICE integer default 0 not null ;
+alter table TAXIMGMT_REFERENCE drop column WAITING_CHARGES cascade ;
+alter table TAXIMGMT_REFERENCE add column WAITING_CHARGES integer default 0 not null ;

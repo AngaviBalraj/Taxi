@@ -26,7 +26,10 @@
                 <field id="destination_time"/>
                 <field id="bank_details"/>
                 <field id="card"/>
-                <field id="amount"/>
+                <field id="amount"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.closed_bookings.Closed_bookingsEdit"/>
+                </field>
             </column>
         </fieldGroup>
         <frame id="windowActions"

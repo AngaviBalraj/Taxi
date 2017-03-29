@@ -26,7 +26,7 @@ public class Booking_details extends StandardEntity {
     protected String phone_number;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "DATE_", nullable = false)
+    @Column(name = "DATE_",nullable=false)
     protected Date date;
 
     @Column(name = "SOURCE", nullable = false)
@@ -50,7 +50,26 @@ public class Booking_details extends StandardEntity {
     protected String bank_name;
 
     @Column(name = "AMOUNT", nullable = false)
-    protected String amount;
+    protected Integer amount;
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
+
+
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
 
 
     public void setEmp_id(String emp_id) {
@@ -85,14 +104,6 @@ public class Booking_details extends StandardEntity {
 
     public String getCustomer_name() {
         return customer_name;
-    }
-
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
-    }
-
-    public String getPhone_number() {
-        return phone_number;
     }
 
     public void setDate(Date date) {
@@ -141,14 +152,6 @@ public class Booking_details extends StandardEntity {
 
     public String getBank_name() {
         return bank_name;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public String getAmount() {
-        return amount;
     }
 
 

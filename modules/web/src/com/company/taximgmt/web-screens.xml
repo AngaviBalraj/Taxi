@@ -3,4 +3,6 @@
     <include file="com/company/taximgmt/screens.xml"/>
     <screen id="mainWindow"
             template="com/company/taximgmt/web/mainwindow/ext-mainwindow.xml"/>
+    <screen id="loginWindow"
+            template="com/company/taximgmt/web/loginwindow/ext-loginwindow.xml"/>
 </screen-config>

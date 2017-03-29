@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 public class Car_details extends StandardEntity {
     private static final long serialVersionUID = -6350931772041916566L;
 
-    @Column(name = "CAR_NUMBER", nullable = false)
+    @Column(name = "CAR_NUMBER", nullable = false, unique = true)
     protected String car_number;
 
     @Column(name = "CAR_NAME", nullable = false)
@@ -35,13 +35,22 @@ public class Car_details extends StandardEntity {
     protected String description;
 
     @Column(name = "AMOUNT", nullable = false)
-    protected String amount;
+    protected Integer amount;
 
     @Column(name = "FUEL", nullable = false)
     protected String fuel;
 
     @Column(name = "ACTIVE", nullable = false)
     protected Boolean active = false;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
 
     public void setActive(Boolean active) {
         this.active = active;
@@ -56,10 +65,6 @@ public class Car_details extends StandardEntity {
         this.description = description;
     }
 
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
 
 
     public void setFuel(String fuel) {
@@ -77,10 +82,6 @@ public class Car_details extends StandardEntity {
 
     public String getDescription() {
         return description;
-    }
-
-    public String getAmount() {
-        return amount;
     }
 
     public String getFuel() {

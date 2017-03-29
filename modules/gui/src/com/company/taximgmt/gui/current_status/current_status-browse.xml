@@ -34,10 +34,7 @@
                 <column id="customer_id"/>
                 <column id="driver_id"/>
                 <column id="car_number"/>
-                <column id="car_booked"/>
-                <column id="car_assigned"/>
-                <column id="started"/>
-                <column id="running"/>
+                <column id="status"/>
             </columns>
             <rows datasource="current_statusesDs"/>
             <rowsCount/>

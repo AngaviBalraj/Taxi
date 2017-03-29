@@ -17,13 +17,31 @@
         <fieldGroup id="fieldGroup"
                     datasource="referenceDs">
             <column width="250px">
-                <field id="kilometer"/>
-                <field id="price"/>
+                <field id="kilometer"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
+                <field id="price"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
                 <field id="car_name"/>
-                <field id="car_tax"/>
-                <field id="driver_tips"/>
-                <field id="peak_hours_price"/>
-                <field id="waiting_charges"/>
+                <field id="car_tax"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
+                <field id="driver_tips"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
+                <field id="peak_hours_price"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
+                <field id="waiting_charges"
+                       datatype="int">
+                    <validator class="com.company.taximgmt.gui.reference.ReferenceEdit"/>
+                </field>
             </column>
         </fieldGroup>
         <frame id="windowActions"

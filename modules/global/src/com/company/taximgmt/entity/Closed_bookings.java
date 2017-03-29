@@ -43,7 +43,16 @@ public class Closed_bookings extends StandardEntity {
     protected String card;
 
     @Column(name = "AMOUNT", nullable = false)
-    protected String amount;
+    protected Integer amount;
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
 
     public void setCustomer_id(String customer_id) {
         this.customer_id = customer_id;
@@ -115,14 +124,6 @@ public class Closed_bookings extends StandardEntity {
 
     public String getCard() {
         return card;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public String getAmount() {
-        return amount;
     }
 
 
