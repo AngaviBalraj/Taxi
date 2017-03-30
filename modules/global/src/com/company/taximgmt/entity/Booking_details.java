@@ -13,7 +13,7 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 public class Booking_details extends StandardEntity {
     private static final long serialVersionUID = 7147034724064439288L;
 
-    @Column(name = "CUSTOMER_ID", nullable = false, unique = true)
+    @Column(name = "CUSTOMER_ID")
     protected String customer_id;
 
     @Column(name = "CUSTOMER_NAME", nullable = false)
@@ -51,6 +51,16 @@ public class Booking_details extends StandardEntity {
 
     @Column(name = "AMOUNT", nullable = false)
     protected Integer amount;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
 
     public String getPhone_number() {
         return phone_number;
@@ -104,14 +114,6 @@ public class Booking_details extends StandardEntity {
 
     public String getCustomer_name() {
         return customer_name;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Date getDate() {
-        return date;
     }
 
     public void setSource(String source) {

@@ -17,10 +17,10 @@
         <item id="taximgmt$Reference.browse"/>
         <item id="taximgmt$Accounts.browse"/>
     </menu>
-    <menu id="Status"
+    <menu id="Report"
           insertBefore="administration"
           stylename="colored">
-        <item id="taximgmt$Closed_bookings.browse"/>
         <item id="taximgmt$Current_status.browse"/>
+        <item id="taximgmt$Closed_bookings.browse"/>
     </menu>
 </menu-config>

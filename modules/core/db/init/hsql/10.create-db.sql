@@ -116,7 +116,7 @@ create table TAXIMGMT_BOOKING_DETAILS (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    CUSTOMER_ID varchar(255) not null,
+    CUSTOMER_ID varchar(255),
     CUSTOMER_NAME varchar(255) not null,
     EMP_ID varchar(255) not null,
     PHONE_NUMBER varchar(255) not null,
