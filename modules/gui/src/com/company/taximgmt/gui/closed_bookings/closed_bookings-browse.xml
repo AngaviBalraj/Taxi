@@ -45,14 +45,7 @@
             <rows datasource="closed_bookingsesDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
-                <button id="createBtn"
-                        action="closed_bookingsesTable.create"/>
-                <button id="editBtn"
-                        action="closed_bookingsesTable.edit"/>
-                <button id="removeBtn"
-                        action="closed_bookingsesTable.remove"/>
-            </buttonsPanel>
+                          alwaysVisible="true"/>
         </table>
     </layout>
 </window>

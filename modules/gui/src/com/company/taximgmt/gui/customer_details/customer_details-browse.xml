@@ -67,12 +67,6 @@
                     <rowsCount/>
                     <buttonsPanel id="buttonsPanel"
                                   alwaysVisible="true">
-                        <button id="createBtn"
-                                action="customer_detailsesTable.create"/>
-                        <button id="editBtn"
-                                action="customer_detailsesTable.edit"/>
-                        <button id="removeBtn"
-                                action="customer_detailsesTable.remove"/>
                         <button id="excelBtn"
                                 action="customer_detailsesTable.excel"/>
                         <button id="refreshBtn"

@@ -50,12 +50,6 @@
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn"
-                        action="booking_detailsesTable.create"/>
-                <button id="editBtn"
-                        action="booking_detailsesTable.edit"/>
-                <button id="removeBtn"
-                        action="booking_detailsesTable.remove"/>
                 <button id="excelBtn"
                         action="booking_detailsesTable.excel"/>
             </buttonsPanel>

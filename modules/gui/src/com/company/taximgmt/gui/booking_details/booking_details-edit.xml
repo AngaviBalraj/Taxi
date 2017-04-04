@@ -22,10 +22,7 @@
                     <field id="customer_id"/>
                     <field id="customer_name"/>
                     <field id="phone_number"/>
-                    <field id="date"
-                           datatype="string">
-                        <validator class="com.company.taximgmt.gui.booking_details.Booking_detailsEdit"/>
-                    </field>
+                    <field id="date"/>
                     <field id="emp_id"/>
                     <field id="source"/>
                     <field id="source_time"/>

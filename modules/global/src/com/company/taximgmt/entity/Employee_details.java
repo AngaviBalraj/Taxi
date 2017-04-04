@@ -17,7 +17,7 @@ public class Employee_details extends StandardEntity {
     protected String emp_name;
 
     @Column(name = "PHONE_NUMBER", nullable = false)
-    protected Integer phone_number;
+    protected String phone_number;
 
     @Column(name = "ADDRESS", nullable = false)
     protected String address;
@@ -25,13 +25,14 @@ public class Employee_details extends StandardEntity {
     @Column(name = "WORK_TYPE", nullable = false)
     protected String work_type;
 
-    public Integer getPhone_number() {
+    public String getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(Integer phone_number) {
+    public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
+
 
 
     public void setEmp_id(String emp_id) {

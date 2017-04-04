@@ -29,7 +29,7 @@ public class Accounts extends StandardEntity {
     @Column(name = "MONTH_")
     protected String month;
 
-    @Column(name = "AMOUNT", nullable = false)
+    @Column(name = "AMOUNT")
     protected Integer amount;
 
     public Integer getAmount() {

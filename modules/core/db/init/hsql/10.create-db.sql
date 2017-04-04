@@ -13,8 +13,8 @@ create table TAXIMGMT_CUSTOMER_DETAILS (
     CUSTOMER_NAME varchar(255) not null,
     EMAIL_ID varchar(255) not null,
     ADDRESS varchar(255) not null,
-    PHONENUMBER integer not null,
-    ALTERNATE_PH_NUMBER integer not null,
+    PHONENUMBER varchar(255) not null,
+    ALTERNATE_PH_NUMBER varchar(255) not null,
     --
     primary key (ID)
 )^-- end TAXIMGMT_CUSTOMER_DETAILS
@@ -32,7 +32,7 @@ create table TAXIMGMT_EMPLOYEE_DETAILS (
     --
     EMP_ID varchar(255) not null,
     EMP_NAME varchar(255) not null,
-    PHONE_NUMBER integer not null,
+    PHONE_NUMBER varchar(255) not null,
     ADDRESS varchar(255) not null,
     WORK_TYPE varchar(255) not null,
     --
@@ -148,7 +148,7 @@ create table TAXIMGMT_ACCOUNTS (
     DATE_ date not null,
     DAILY_WAGES integer not null,
     MONTH_ varchar(255),
-    AMOUNT integer not null,
+    AMOUNT integer,
     --
     primary key (ID)
 )^

@@ -39,14 +39,7 @@
             <rows datasource="current_statusesDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
-                <button id="createBtn"
-                        action="current_statusesTable.create"/>
-                <button id="editBtn"
-                        action="current_statusesTable.edit"/>
-                <button id="removeBtn"
-                        action="current_statusesTable.remove"/>
-            </buttonsPanel>
+                          alwaysVisible="true"/>
         </table>
     </layout>
 </window>
